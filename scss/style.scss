@@ -116,9 +116,6 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-
-      .icon {
-      }
     }
   }
 }
@@ -197,9 +194,6 @@ body {
 
     @include laptops() {
       margin-bottom: 0;
-    }
-
-    p {
     }
   }
 
