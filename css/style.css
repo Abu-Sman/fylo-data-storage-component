@@ -29,12 +29,27 @@ body {
   align-items: center;
   justify-content: center;
 }
+@media screen and (min-width: 90em) {
+  .main {
+    background-image: url(../images/bg-desktop.png), linear-gradient(hsl(229, 57%, 11%), hsl(229, 57%, 11%));
+    background-size: 100%;
+    background-position-y: 100%;
+  }
+}
 
 .data-storage {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 2rem;
+  row-gap: 1.5rem;
+}
+@media screen and (min-width: 90em) {
+  .data-storage {
+    max-width: 90rem;
+    grid-template-columns: 1fr 1.6fr;
+    column-gap: 3rem;
+    margin-top: -5%;
+  }
 }
 
 .box1 {
@@ -49,7 +64,7 @@ body {
 .box1--icons {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 .box1--icons .icon-pack {
   background-color: hsl(229, 57%, 11%);
@@ -67,9 +82,16 @@ body {
   color: rgba(221, 219, 255, 0.8);
   position: relative;
 }
+@media screen and (min-width: 90em) {
+  .box2 {
+    text-align: left;
+    padding: 4rem;
+    align-self: end;
+  }
+}
 .box2 .usage-text {
   font-size: 1.5rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1rem;
 }
 .box2 .usage-text span {
   color: hsl(243, 100%, 93%);
@@ -80,7 +102,7 @@ body {
   height: 2rem;
   background-color: rgba(12, 18, 44, 0.7);
   border-radius: 10rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   position: relative;
 }
 .box2 .usage-diagram::before {
@@ -110,9 +132,15 @@ body {
 .box2 .storage {
   display: flex;
   justify-content: space-between;
+  font-size: 1.2rem;
   color: hsl(243, 100%, 93%);
   font-weight: 700;
   margin-bottom: 2rem;
+}
+@media screen and (min-width: 90em) {
+  .box2 .storage {
+    margin-bottom: 0;
+  }
 }
 .box2 .storage-remaining {
   width: 18rem;
@@ -128,6 +156,13 @@ body {
   justify-content: center;
   gap: 1rem;
 }
+@media screen and (min-width: 90em) {
+  .box2 .storage-remaining {
+    bottom: 100%;
+    left: calc(100% - 4rem);
+    transform: translate(-100%, 35%);
+  }
+}
 .box2 .storage-remaining .number {
   font-size: 4rem;
   font-weight: 700;
@@ -138,6 +173,23 @@ body {
   font-weight: 700;
   color: hsl(229, 7%, 55%);
   text-transform: uppercase;
+}
+.box2 .storage-remaining::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 3rem solid transparent;
+  border-left: 3rem solid transparent;
+  position: absolute;
+  z-index: -1;
+}
+@media screen and (min-width: 90em) {
+  .box2 .storage-remaining::before {
+    border-top-color: hsl(0, 0%, 100%);
+    bottom: -2rem;
+    right: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
