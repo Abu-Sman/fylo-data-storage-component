@@ -68,6 +68,12 @@ body {
     background-size: 100%;
     background-position-y: 100%;
   }
+
+  @include desktops() {
+    min-height: 80vh;
+    max-width: 70vw;
+    margin: 10rem auto;
+  }
 }
 
 //////////////////////////////////////
@@ -83,7 +89,7 @@ body {
     max-width: 90rem;
     grid-template-columns: 1fr 1.6fr;
     column-gap: 3rem;
-    margin-top: -5%;
+    margin-top: -10%;
   }
 }
 

@@ -36,6 +36,13 @@ body {
     background-position-y: 100%;
   }
 }
+@media screen and (min-width: 150em) {
+  .main {
+    min-height: 80vh;
+    max-width: 70vw;
+    margin: 10rem auto;
+  }
+}
 
 .data-storage {
   width: 100%;
@@ -48,7 +55,7 @@ body {
     max-width: 90rem;
     grid-template-columns: 1fr 1.6fr;
     column-gap: 3rem;
-    margin-top: -5%;
+    margin-top: -10%;
   }
 }
 
